@@ -1,24 +1,38 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(
-  MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: Center(
-          child: Text(
-            "Rich",
-            style: TextStyle(color: Colors.yellow, fontSize: 35),
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey[900],
+          title: Center(
+            child: Text(
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 35,
+              ),
+              'App'
+            ),
+          ),
+        ),
+        body: SafeArea(
+          child: Center(
+            child: Image(
+              image: AssetImage('images/diamond.png'),
+            ),
           ),
         ),
       ),
-      body: SafeArea(
-        child: Center(
-          child: Image(
-            image: AssetImage('images/diamond.png')
-          ),
-        ),
-      ),
-    ),
-  ),
-);
+    );
+  }
+}
