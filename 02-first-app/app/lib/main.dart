@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyAppState createState() {
+    return _MyAppState();
+  }
 }
 
 class _MyAppState extends State<MyApp> {
@@ -17,20 +21,13 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.blueGrey[900],
           title: Center(
             child: Text(
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 35,
-              ),
-              'App'
+              style: TextStyle(color: Colors.white, fontSize: 35),
+              'App',
             ),
           ),
         ),
         body: SafeArea(
-          child: Center(
-            child: Image(
-              image: AssetImage('images/diamond.png'),
-            ),
-          ),
+          child: Center(child: Image(image: AssetImage('images/diamond.png'))),
         ),
       ),
     );
