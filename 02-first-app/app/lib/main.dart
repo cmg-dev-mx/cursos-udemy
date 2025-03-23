@@ -27,7 +27,12 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         body: SafeArea(
-          child: Center(child: Image(image: AssetImage('images/diamond.png'))),
+          child: Center(
+            child: Image(
+//              image: AssetImage('images/diamond.png')
+                image: NetworkImage('https://docs.growndiamondcorp.com/blog/types-of-diamonds.png')
+            )
+          ),
         ),
       ),
     );
